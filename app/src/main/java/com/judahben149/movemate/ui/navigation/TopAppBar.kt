@@ -38,8 +38,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
-import com.judahben149.movemate.ui.components.BackButton
-import com.judahben149.movemate.ui.components.SearchRow
+import com.judahben149.movemate.ui.components.basic.BackButton
+import com.judahben149.movemate.ui.components.home.SearchRow
 import com.judahben149.movemate.ui.theme.Dimensions
 import com.judahben149.movemate.ui.theme.Dimensions.Padding4
 import com.judahben149.movemate.ui.theme.Dimensions.ProfileIconSize

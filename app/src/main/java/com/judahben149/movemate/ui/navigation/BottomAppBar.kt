@@ -18,8 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
 import com.judahben149.movemate.domain.enums.MoveMateScreens
 import com.judahben149.movemate.domain.model.BottomTab
-import com.judahben149.movemate.ui.components.BottomTabItem
-import com.judahben149.movemate.ui.components.Indicator
+import com.judahben149.movemate.ui.components.basic.BottomTabItem
+import com.judahben149.movemate.ui.components.basic.Indicator
 
 @Composable
 fun BottomAppBar(

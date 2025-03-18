@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.vehicle
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween

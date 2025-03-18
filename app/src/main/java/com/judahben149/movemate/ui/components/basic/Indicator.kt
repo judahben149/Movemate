@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.basic
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateIntOffsetAsState

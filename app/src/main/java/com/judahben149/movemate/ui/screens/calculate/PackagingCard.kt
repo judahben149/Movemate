@@ -33,8 +33,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
-import com.judahben149.movemate.ui.components.LabelText
-import com.judahben149.movemate.ui.components.SecondaryText
+import com.judahben149.movemate.ui.components.basic.LabelText
+import com.judahben149.movemate.ui.components.basic.SecondaryText
 
 @Composable
 fun PackagingCard() {

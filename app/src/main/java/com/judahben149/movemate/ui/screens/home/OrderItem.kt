@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.domain.model.Order
-import com.judahben149.movemate.ui.components.SecondaryText
+import com.judahben149.movemate.ui.components.basic.SecondaryText
 
 @Composable
 fun OrderItem(order: Order) {
@@ -57,7 +57,7 @@ fun OrderItem(order: Order) {
             )
 
             Spacer(Modifier.height(2.dp))
-            
+
             Row(verticalAlignment = CenterVertically) {
                 SecondaryText(
                     text = order.id,

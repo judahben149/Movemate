@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.home
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.tween

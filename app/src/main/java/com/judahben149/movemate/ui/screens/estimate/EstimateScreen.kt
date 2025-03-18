@@ -38,9 +38,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
-import com.judahben149.movemate.ui.components.ActionButton
-import com.judahben149.movemate.ui.components.Screen
-import com.judahben149.movemate.ui.components.SecondaryText
+import com.judahben149.movemate.ui.components.basic.ActionButton
+import com.judahben149.movemate.ui.components.basic.Screen
+import com.judahben149.movemate.ui.components.basic.SecondaryText
 import com.judahben149.movemate.ui.theme.InProgressTextGreen
 
 @Composable

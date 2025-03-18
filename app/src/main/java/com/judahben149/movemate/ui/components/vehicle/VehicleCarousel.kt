@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.vehicle
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.domain.model.Vehicle
 import com.judahben149.movemate.ui.animation.AnimationDefaults
+import com.judahben149.movemate.ui.components.basic.LabelText
 import com.judahben149.movemate.ui.theme.Dimensions
 
 @Composable

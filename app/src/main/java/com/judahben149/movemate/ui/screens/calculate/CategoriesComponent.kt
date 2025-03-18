@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.domain.model.Category
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
-import com.judahben149.movemate.ui.components.LabelText
-import com.judahben149.movemate.ui.components.SecondaryText
+import com.judahben149.movemate.ui.components.basic.LabelText
+import com.judahben149.movemate.ui.components.basic.SecondaryText
 import com.judahben149.movemate.ui.theme.CursorNavyBlue
 
 @Composable

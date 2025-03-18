@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.home
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
@@ -47,6 +47,8 @@ import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.domain.model.Shipment
 import com.judahben149.movemate.ui.animation.AnimationDefaults
+import com.judahben149.movemate.ui.components.basic.AdjustableDivider
+import com.judahben149.movemate.ui.components.basic.LabelText
 import com.judahben149.movemate.ui.theme.Dimensions
 import com.judahben149.movemate.ui.theme.ReceiverBoxLightGreen
 import com.judahben149.movemate.ui.theme.SenderBoxLightOrange

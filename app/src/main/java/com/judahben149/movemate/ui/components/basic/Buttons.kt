@@ -1,4 +1,4 @@
-package com.judahben149.movemate.ui.components
+package com.judahben149.movemate.ui.components.basic
 
 import androidx.annotation.StringRes
 import androidx.compose.animation.AnimatedVisibility
