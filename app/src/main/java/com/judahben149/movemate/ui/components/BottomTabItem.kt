@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.domain.model.BottomTab
@@ -42,10 +43,11 @@ fun BottomTabItem(
             tint = color
         )
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(4.dp))
 
         Text(
             text = stringResource(id = tab.id),
+            fontWeight = if (isSelected) FontWeight.ExtraBold else FontWeight.Normal,
             fontSize = 14.sp,
             color = color,
         )

@@ -20,7 +20,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.judahben149.movemate.domain.enums.MoveMateScreens
 import com.judahben149.movemate.ui.animation.AnimationDefaults.TWEEN_ANIMATION_DURATION
-import com.judahben149.movemate.ui.screens.EstimateScreenRoute
+import com.judahben149.movemate.ui.screens.estimate.EstimateScreenRoute
 import com.judahben149.movemate.ui.screens.calculate.CalculateScreenRoute
 import com.judahben149.movemate.ui.screens.home.HomeScreenRoute
 import com.judahben149.movemate.ui.screens.profile.ProfileScreenRoute

@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
+import com.judahben149.movemate.domain.enums.MoveMateScreens
 import com.judahben149.movemate.domain.model.BottomTab
 import com.judahben149.movemate.ui.components.BottomTabItem
 import com.judahben149.movemate.ui.components.Indicator
@@ -32,7 +33,7 @@ fun BottomAppBar(
     var startingPoint by remember { mutableIntStateOf(0) }
 
 
-    if (currentDestination?.route == "Home") {
+    if (currentDestination?.route == MoveMateScreens.HOME.name) {
         startingPoint = 0
     }
 
