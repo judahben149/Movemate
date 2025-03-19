@@ -35,11 +35,11 @@ fun VehicleCarousel(vehicles: List<Vehicle>) {
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetY = { fullHeight -> fullHeight * 2 }
         ) + fadeIn(
             animationSpec = tween(
-                AnimationDefaults.TWEEN_ANIMATION_DURATION
+                AnimationDefaults.TWEEN_ANIMATION_DURATION_500
             )
         ),
     ) {

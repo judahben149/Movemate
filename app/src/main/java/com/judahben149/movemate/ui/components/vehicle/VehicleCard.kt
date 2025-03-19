@@ -3,7 +3,6 @@ package com.judahben149.movemate.ui.components.vehicle
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideIn
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,11 +25,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color.Companion.Gray
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.judahben149.movemate.R
 import com.judahben149.movemate.domain.model.Vehicle
 import com.judahben149.movemate.ui.animation.AnimationDefaults
@@ -61,13 +60,13 @@ fun VehicleCard(
     ) {
         Text(
             text = vehicle.freight,
-            fontSize = 22.sp,
+            fontSize = 20.sp,
         )
 
         Text(
             text = vehicle.category,
             color = Gray,
-            fontSize = 16.sp
+            fontSize = 14.sp
         )
 
         AnimatedVisibility(
@@ -81,16 +80,16 @@ fun VehicleCard(
                         y = distanceY
                     )
                 },
-                animationSpec = tween(durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION)
+                animationSpec = tween(durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION_500)
             )
         ) {
-            Image(
-                painter = painterResource(vehicle.icon),
+            AsyncImage(
+                model = vehicle.icon,
                 contentDescription = null,
                 modifier = Modifier
                     .size(108.dp)
-                    .scale(1.3F)
-                    .offset(x = 48.dp, y = -(16).dp)
+                    .scale(1.3f)
+                    .offset(x = 48.dp, y = (-16).dp)
             )
         }
 
