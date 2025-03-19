@@ -23,7 +23,8 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color.Black.copy(alpha = 0.85f),
     onPrimary = White,
     onBackground = TextNavyBlue,
-    onTertiary = Color.Gray
+    onTertiary = Color.Gray,
+    surfaceContainerHigh = OnSurfaceGrey
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -48,7 +49,8 @@ private val DarkColorScheme = darkColorScheme(
     onSurface = Color.White.copy(alpha = 0.8f),
     onPrimary = White,
     onBackground = Color.White.copy(alpha = 0.85f),
-    onTertiary = Color.Gray
+    onTertiary = Color.Gray,
+    surfaceContainerHigh = DarkGreyContainerBackground
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
