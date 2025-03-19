@@ -50,14 +50,14 @@ fun ShipmentItemCard(
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetY = { fullHeight -> fullHeight * 2 })
     ) {
         Row(
             modifier = Modifier
                 .padding(top = 12.dp, start = 16.dp, end = 16.dp)
                 .background(
-                    color = Color.White.copy(alpha = 0.5f),
+                    color = MaterialTheme.colorScheme.surfaceVariant,
                     shape = RoundedCornerShape(24.dp)
                 )
                 .padding(16.dp)

@@ -69,9 +69,9 @@ fun TrackingCard(
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
-            initialOffsetY = { fullHeight -> fullHeight * 2 })
-                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_300),
+            initialOffsetY = { fullHeight -> fullHeight/2 })
+                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_300)),
     ) {
         Column {
             LabelText(
@@ -111,7 +111,7 @@ fun TrackingCard(
                     Spacer(modifier = Modifier.weight(1F))
 
                     Image(
-                        painter = painterResource(id = R.drawable.ic_forklift),
+                        painter = painterResource(id = R.drawable.ic_fork_lift),
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier

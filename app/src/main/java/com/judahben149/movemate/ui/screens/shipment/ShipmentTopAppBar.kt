@@ -59,7 +59,7 @@ fun ShipmentScreenAppBar(
     val appBarHeight by animateDpAsState(
         targetValue = if (animateComponents) 113.dp else 180.dp,
         animationSpec = tween(
-            durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION,
+            durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION_500,
             easing = LinearEasing
         ),
         label = "offset",
@@ -86,7 +86,7 @@ fun ShipmentScreenAppBar(
             AnimatedVisibility(
                 visible = animateComponents,
                 enter = slideInVertically(
-                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
                     initialOffsetY = { fullHeight -> fullHeight * 2 })
             ) {
                 LabelText(
@@ -121,7 +121,7 @@ fun ShipmentTabRow(
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInHorizontally(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetX = { fullWidth -> fullWidth * 2 })
     ) {
         ScrollableTabRow(
@@ -134,7 +134,7 @@ fun ShipmentTabRow(
                 AnimatedVisibility(
                     visible = animateComponents,
                     enter = slideInVertically(
-                        animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+                        animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
                         initialOffsetY = { fullHeight -> fullHeight * 3 })
                 )
                 {

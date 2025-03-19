@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
+import com.judahben149.movemate.ui.animation.bounce
 import com.judahben149.movemate.ui.components.basic.ActionButton
 import com.judahben149.movemate.ui.components.basic.Screen
 import com.judahben149.movemate.ui.components.basic.SecondaryText
@@ -108,7 +109,7 @@ fun EstimateScreen(
             }
             AnimatedVisibility(
                 visible = animateComponents, enter = scaleIn(
-                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)
+                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)
                 ) + fadeIn()
             ) {
                 Icon(
@@ -147,7 +148,8 @@ fun EstimateScreen(
                 ActionButton(
                     onButtonClick = onNavigateHome,
                     label = R.string.back_to_home,
-                    labelFontSize = 16.sp
+                    labelFontSize = 16.sp,
+                    modifier = Modifier.bounce()
                 )
             }
         }
@@ -162,9 +164,9 @@ fun AnimatedContent(
     AnimatedVisibility(
         visible = shouldAnimate,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetY = { fullHeight -> fullHeight * 2 })
-                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)),
     ) {
         content()
     }
