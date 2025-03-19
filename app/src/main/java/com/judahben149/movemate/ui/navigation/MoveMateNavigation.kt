@@ -19,7 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.judahben149.movemate.domain.enums.MoveMateScreens
-import com.judahben149.movemate.ui.animation.AnimationDefaults.TWEEN_ANIMATION_DURATION
+import com.judahben149.movemate.ui.animation.AnimationDefaults.TWEEN_ANIMATION_DURATION_500
 import com.judahben149.movemate.ui.screens.estimate.EstimateScreenRoute
 import com.judahben149.movemate.ui.screens.calculate.CalculateScreenRoute
 import com.judahben149.movemate.ui.screens.home.HomeScreenRoute
@@ -61,7 +61,7 @@ fun MoveMateNavigation() {
 
             composable(
                 route = MoveMateScreens.HOME.name,
-                exitTransition = { fadeOut(animationSpec = tween(TWEEN_ANIMATION_DURATION)) }
+                exitTransition = { fadeOut(animationSpec = tween(TWEEN_ANIMATION_DURATION_500)) }
             ) {
                 HomeScreenRoute()
             }
