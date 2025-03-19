@@ -1,7 +1,9 @@
 package com.judahben149.movemate.domain.model
 
+import androidx.annotation.Keep
 import com.judahben149.movemate.domain.enums.ShipmentStatus
 
+@Keep
 data class Shipment(
     val id: String,
     val name: String,
