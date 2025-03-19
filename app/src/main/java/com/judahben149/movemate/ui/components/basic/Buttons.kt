@@ -35,7 +35,7 @@ fun BackButton(
 ) {
     AnimatedVisibility(
         visible = animateComponents,
-        enter = expandHorizontally() + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+        enter = expandHorizontally() + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)),
         exit = fadeOut()
     ) {
         Icon(

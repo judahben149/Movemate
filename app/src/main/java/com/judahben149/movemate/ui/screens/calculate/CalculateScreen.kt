@@ -9,6 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.R
+import com.judahben149.movemate.ui.animation.bounce
 import com.judahben149.movemate.ui.components.basic.ActionButton
 import com.judahben149.movemate.ui.components.basic.LabelText
 import com.judahben149.movemate.ui.components.basic.Screen
@@ -53,7 +54,8 @@ fun CalculateScreen(
                         onButtonClick = onCalculateClicked,
                         label = R.string.calculate,
                         paddingValues = PaddingValues(top = 48.dp),
-                        labelFontSize = 22.sp
+                        labelFontSize = 22.sp,
+                        modifier = Modifier.bounce()
                     )
                 }
             }

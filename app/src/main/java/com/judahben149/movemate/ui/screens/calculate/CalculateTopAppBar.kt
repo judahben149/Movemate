@@ -36,7 +36,7 @@ fun CalculateTopAppBar(
     val height by animateDpAsState(
         targetValue = if (animateComponents) 60.dp else 180.dp,
         animationSpec = tween(
-            durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION
+            durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION_500
         ),
         label = "offset"
     )

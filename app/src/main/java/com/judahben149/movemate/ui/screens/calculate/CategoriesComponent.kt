@@ -5,6 +5,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideInVertically
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -35,6 +36,7 @@ import androidx.compose.ui.unit.sp
 import com.judahben149.movemate.domain.model.Category
 import com.judahben149.movemate.R
 import com.judahben149.movemate.ui.animation.AnimationDefaults
+import com.judahben149.movemate.ui.animation.bounce
 import com.judahben149.movemate.ui.components.basic.LabelText
 import com.judahben149.movemate.ui.components.basic.SecondaryText
 import com.judahben149.movemate.ui.theme.CursorNavyBlue
@@ -59,9 +61,9 @@ fun CategoriesComponent() {
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetY = { fullHeight -> fullHeight * 2 })
-                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)),
     ) {
         Column(
             Modifier
@@ -103,9 +105,9 @@ fun CategoryChips(
             AnimatedVisibility(
                 visible = animateComponents,
                 enter = slideInHorizontally(
-                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+                    animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
                     initialOffsetX = { fullWidth -> fullWidth * 4 })
-                        + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+                        + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)),
             ) { CategoryChip(category = it) }
         }
     }
@@ -116,13 +118,21 @@ fun CategoryChip(category: Category) {
     var selected by remember { mutableStateOf(category.isSelected) }
 
     FilterChip(
-        modifier = Modifier.padding(end = 8.dp),
+        modifier = Modifier.padding(end = 8.dp).bounce(),
         onClick = { selected = !selected },
         label = {
             Text(
                 text = category.name,
                 modifier = Modifier.padding(vertical = 8.dp),
-                color = if (selected) Color.White else CursorNavyBlue,
+                color = if (selected) {
+                    Color.White
+                } else {
+                    if (isSystemInDarkTheme()) {
+                        Color.White
+                    } else {
+                        CursorNavyBlue
+                    }
+                },
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Normal
             )
