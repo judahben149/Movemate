@@ -60,13 +60,13 @@ fun VehicleCard(
     ) {
         Text(
             text = vehicle.freight,
-            fontSize = 20.sp,
+            fontSize = 18.sp,
         )
 
         Text(
             text = vehicle.category,
             color = Gray,
-            fontSize = 14.sp
+            fontSize = 13.sp
         )
 
         AnimatedVisibility(
@@ -80,7 +80,7 @@ fun VehicleCard(
                         y = distanceY
                     )
                 },
-                animationSpec = tween(durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION_500)
+                animationSpec = tween(durationMillis = AnimationDefaults.TWEEN_ANIMATION_DURATION_650)
             )
         ) {
             AsyncImage(
