@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -47,9 +48,9 @@ fun PackagingCard() {
     AnimatedVisibility(
         visible = animateComponents,
         enter = slideInVertically(
-            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION),
+            animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500),
             initialOffsetY = { fullHeight -> fullHeight * 2 })
-                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)),
+                + fadeIn(animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)),
     ) {
         Column(
             modifier = Modifier
@@ -68,7 +69,7 @@ fun PackagingCard() {
                 modifier = Modifier
                     .padding(top = 16.dp)
                     .fillMaxWidth()
-                    .background(color = Color.White, shape = RoundedCornerShape(8.dp))
+                    .background(color = MaterialTheme.colorScheme.surfaceVariant, shape = RoundedCornerShape(8.dp))
                     .padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {

@@ -32,7 +32,7 @@ import com.judahben149.movemate.ui.theme.Dimensions
 fun DestinationItem(
     @DrawableRes iconId: Int,
     placeholder: String,
-    backgroundColour: Color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.7F),
+    backgroundColour: Color = MaterialTheme.colorScheme.surfaceContainerHigh.copy(alpha = 0.2F),
 ) {
     var query by remember { mutableStateOf("") }
 
