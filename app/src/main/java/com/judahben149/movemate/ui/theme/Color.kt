@@ -24,7 +24,7 @@ val CursorNavyBlue = Color(0xFF242b39)
 
 val PrimaryColor = Color(0xFF543b9b)
 val SecondaryColor = Color(0XFFF58426)
-val SurfaceBackgroundColor = Color(0xFFFAFAFA)
+val SurfaceBackgroundColor = Color(0xFFF7F7F7)
 val OnSurfaceGrey = Color(0xFFD8D9DA)
 val SurfaceColor = Color(0xFFF7F7F8)
 val ErrorColor = Color(0xFFE53935)
