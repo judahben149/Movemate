@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -20,13 +23,62 @@ android {
         }
     }
 
+    signingConfigs {
+        getByName("debug"){
+            val secretProps = Properties()
+            val secretPropsFile = rootProject.file("secrets.properties")
+
+            if (secretPropsFile.exists()) {
+                secretProps.load(FileInputStream(secretPropsFile))
+
+                storeFile = file(secretProps.getProperty("keystore.file"))
+                storePassword = secretProps.getProperty("keystore.password")
+                keyAlias = secretProps.getProperty("keystore.key.alias")
+                keyPassword = secretProps.getProperty("keystore.key.password")
+            } else {
+                storeFile = file("debug.keystore")
+                storePassword = "android"
+                keyAlias = "androiddebugkey"
+                keyPassword = "android"
+            }
+        }
+
+        create("release") {
+                val secretProps = Properties()
+                val secretPropsFile = rootProject.file("secrets.properties")
+
+                if (secretPropsFile.exists()) {
+                    secretProps.load(FileInputStream(secretPropsFile))
+
+                    storeFile = file(secretProps.getProperty("keystore.file"))
+                    storePassword = secretProps.getProperty("keystore.password")
+                    keyAlias = secretProps.getProperty("keystore.key.alias")
+                    keyPassword = secretProps.getProperty("keystore.key.password")
+                } else {
+                    storeFile = file("debug.keystore")
+                    storePassword = "android"
+                    keyAlias = "androiddebugkey"
+                    keyPassword = "android"
+                }
+            }
+    }
+
     buildTypes {
+        debug {
+            isDebuggable = true
+            signingConfigs.getByName("debug")
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+        }
+
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
+            signingConfigs.getByName("release")
         }
     }
     compileOptions {
@@ -45,6 +97,15 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+            isUniversalApk = false
         }
     }
 }
@@ -67,6 +128,11 @@ dependencies {
 //    ksp(libs.hilt.compiler)
 //    implementation(libs.androidx.hilt.navigation.compose)
 
+    // Splash screen
+    implementation(libs.androidx.core.splashscreen)
+
+    // Coil Image loading library
+    implementation(libs.coil.compose)
 
 
     // Test implementation
