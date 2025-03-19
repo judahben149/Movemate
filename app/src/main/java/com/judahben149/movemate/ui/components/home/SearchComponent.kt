@@ -59,7 +59,7 @@ fun SearchRow(
         modifier = Modifier
             .padding(horizontal = 16.dp)
             .animateContentSize(
-                animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION)
+                animationSpec = tween(AnimationDefaults.TWEEN_ANIMATION_DURATION_500)
             )
             .fillMaxWidth()
             .focusRequester(focusRequester)

@@ -14,7 +14,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import com.judahben149.movemate.ui.animation.AnimationDefaults.TWEEN_ANIMATION_DURATION
+import com.judahben149.movemate.ui.animation.AnimationDefaults.TWEEN_ANIMATION_DURATION_500
 import com.judahben149.movemate.ui.theme.SelectedBottomBarColor
 
 @Composable
@@ -30,7 +30,7 @@ fun Indicator(
     val offset by animateIntOffsetAsState(
         targetValue = IntOffset(x = newPosition, y = 0),
         animationSpec = tween(
-            durationMillis = TWEEN_ANIMATION_DURATION,
+            durationMillis = TWEEN_ANIMATION_DURATION_500,
             easing = FastOutSlowInEasing
         ),
         label = "offset"
