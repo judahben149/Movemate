@@ -8,7 +8,7 @@
 <img src="https://github.com/user-attachments/assets/b4a99a79-af7c-473b-8ada-b7aa2c2c69ad" width="300" alt="Calculate Screen">
 <img src="https://github.com/user-attachments/assets/fe168b3d-ab33-478a-bb68-18bae70e5d68" width="300" alt="Shipment Screen">
 
-## Demo Video (Click to Opem)
+## Demo Video (Click to Open)
 <a href="https://youtube.com/shorts/0kWRyBiy9fU">
   <img src="https://github.com/user-attachments/assets/f7f53184-45e7-401d-a537-1d71649d1af4" width="300" alt="MoveMate app flow">
 </a>
