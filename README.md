@@ -27,5 +27,3 @@
 <p>This project is for assessment purposes only and not intended for commercial use.</p>
 
 <hr>
-
-![MoveMate_Home_Screen](https://github.com/user-attachments/assets/f7f53184-45e7-401d-a537-1d71649d1af4)
